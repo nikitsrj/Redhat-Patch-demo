@@ -1,0 +1,13 @@
+# By nikitSwaraj
+---
+- hosts: webservers
+  sudo: yes
+  remote_user: root
+  tasks: 
+      - name: Updating System
+        yum: name=* state=latest
+      - name: Opening port for http
+        firewalld: port=80 permanent=yes state=enabled
+      - name: Closing port for mail server
+        firewalld: port=25 permanent=yes state=enabled
+
