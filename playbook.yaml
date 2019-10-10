@@ -6,10 +6,10 @@
   tasks: 
       - name: Updating System
         yum: name=* state=latest
-      - name: Opening port for http
-        firewalld: port=80/tcp permanent=yes state=enabled
-        notify: restart firewalld
-      - name: Closing port for mail server
-        firewalld: port=25/tcp permanent=yes state=enabled
-        notify: restart firewalld
+#      - name: Opening port for http
+#        firewalld: port=80/tcp permanent=yes state=enabled
+#        notify: restart firewalld
+#      - name: Closing port for mail server
+#        firewalld: port=25/tcp permanent=yes state=enabled
+#        notify: restart firewalld
 
